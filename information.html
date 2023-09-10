@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My favourite movie</title>
+</head>
+<body>
+
+    <nav> 
+        <ul>
+            <li><a href="text.html" style="color: rgb(220, 152, 251);">Some Text</a></li>
+            <li><a href="media.html" style="color: rgb(220, 152, 251);">Cool media</a></li>
+            
+        </ul>
+    </nav>
+
+    <img src="https://i.pinimg.com/originals/19/ad/cb/19adcbbda33e02eaf25b2baa8a79d5f7.jpg" alt="Mabel">
+
+
+    <h1 style="font-size:80px;color: rgb(220, 152, 251);">My favorite movie</h1>
+
+
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br> 
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+    </form>
+
+
+
+    <form> 
+        <div>
+            <input type="password" value="" placeholder="Write password here">
+            <input type="number" value="" placeholder="Enter your age here">
+
+        </div>
+        
+    </form>
+
+    <h2>What character are you</h2>
+    <p>Choose your favorite Gravity Falls character:</p>
+
+    <form>
+        <input type="radio" id="Dipper" name="fav_character" value="Dipper">
+        <label for="Dipper">Dipper</label><br>
+        <input type="radio" id="Mabel" name="fav_character" value="Mabel">
+        <label for="Mabel">Mabel</label><br>
+        <input type="radio" id="Bill Cipher" name="fav_character" value="Bill Cipher">
+        <label for="Bill Cipher">Bill Cipher</label>
+    </form>
+
+
+    <h2>Associates</h2>
+    <p>Choose the character you associate yourself with:</p>
+
+    <form action="/action_page.php">
+        <input type="checkbox" id="character1" name="character1" value="Dipper">
+        <label for="character1"> I associate myself with Dipper</label><br>
+        <input type="checkbox" id="character2" name="character2" value="Mabel">
+        <label for="character2"> I associate myself with Mabel</label><br>
+        <input type="checkbox" id="character3" name="character3" value="Bill Cipher">
+        <label for="character3"> I associate myself with Bill Cipher</label><br><br>
+    </form> 
+
+
+    <form>
+        <label for="favSeason">What is your favourite season?</label>
+        <input type="text" id="favSeason" name="favSeason"><br><br>
+
+        <label for="whyLove">Whay do you like this movie?</label>
+        <input type="text" id="whyLove" name="whyLove"><br><br>
+
+
+        <input type="button" value="Send your answers" onclick="Answers()">
+    </form>
+
+
+    <h2>Check</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Favourite season</th>
+                <th>Why like</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr id="answers">
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        function Answers() {
+            var favSeason = document.getElementById("favSeason").value;
+            var whyLove = document.getElementById("whyLove").value;
+            var answers = document.getElementById("answers");
+
+            answers.children[0].textContent = favSeason;
+            answers.children[1].textContent = whyLove;
+        }
+    </script>
+
+        <div class="footer">Thank you for your time!
+        </div>
+</body>
+</html>
